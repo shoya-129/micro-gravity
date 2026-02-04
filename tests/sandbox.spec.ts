@@ -8,7 +8,7 @@
 /// <reference path="../src/globals.d.ts" />
 
 import { describe, it, expect } from 'vitest';
-import { getLoadedExtensions, hasExtension } from '../src/index.js';
+import { getLoadedExtensions } from '../src/index.js';
 
 describe('MicroGravity Sandbox', () => {
     
