@@ -1,0 +1,54 @@
+{
+    "name": "@titanpl/micro-gravity",
+    "version": "1.0.0",
+    "description": "TitanPL Test Sandbox - Execute real TitanPL code in Vitest without mocking",
+    "type": "module",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.js"
+        },
+        "./setup": {
+            "types": "./dist/setup.d.ts",
+            "import": "./dist/setup.js"
+        }
+    },
+    "files": [
+        "dist",
+        "README.md"
+    ],
+    "scripts": {
+        "build": "tsc",
+        "dev": "tsc --watch",
+        "test": "vitest run",
+        "test:watch": "vitest",
+        "prepublishOnly": "npm run build"
+    },
+    "keywords": [
+        "titanpl",
+        "titan",
+        "testing",
+        "sandbox",
+        "vitest",
+        "ffi",
+        "rust"
+    ],
+    "author": "TitanPL",
+    "license": "ISC",
+    "dependencies": {
+        "koffi": "^2.9.0"
+    },
+    "devDependencies": {
+        "@types/node": "^20.10.0",
+        "typescript": "^5.3.0",
+        "vitest": "^1.0.0"
+    },
+    "peerDependencies": {
+        "vitest": ">=1.0.0"
+    },
+    "engines": {
+        "node": ">=18.0.0"
+    }
+}
