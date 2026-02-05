@@ -15,7 +15,7 @@ Micro-Gravity automatically discovers and loads TitanPL extensions, allowing you
 ## 📦 Installation
 
 ```bash
-npm install t8n-micro-gravity --save-dev
+npm install @tgrv/microgravity --save-dev
 ```
 
 ## 🚀 Quick Start
@@ -28,7 +28,7 @@ import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
     test: {
-        setupFiles: ['t8n-micro-gravity/setup'],
+        setupFiles: ['@tgrv/microgravity/setup'],
     }
 });
 ```
@@ -102,7 +102,7 @@ If the same extension exists in multiple places, only the first one found is loa
 If you need more control:
 
 ```typescript
-import { bootstrap } from 't8n-micro-gravity';
+import { bootstrap } from '@tgrv/microgravity';
 
 await bootstrap({
     rootDir: '/path/to/project',  // Default: process.cwd()
@@ -121,7 +121,7 @@ Add global types to your `tsconfig.json`:
 ```json
 {
   "compilerOptions": {
-    "types": ["t8n-micro-gravity/globals"]
+    "types": ["@tgrv/microgravity/globals"]
   }
 }
 ```
@@ -161,7 +161,7 @@ interface MicroGravityOptions {
 Get list of discovered extensions (useful for debugging).
 
 ```typescript
-import { getLoadedExtensions } from 't8n-micro-gravity';
+import { getLoadedExtensions } from '@tgrv/microgravity';
 
 const extensions = getLoadedExtensions();
 console.log(extensions);
@@ -176,7 +176,7 @@ console.log(extensions);
 Check if an extension is loaded.
 
 ```typescript
-import { hasExtension } from 't8n-micro-gravity';
+import { hasExtension } from '@tgrv/microgravity';
 
 if (hasExtension('@titanpl/core')) {
     // Core is available

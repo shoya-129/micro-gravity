@@ -1,5 +1,5 @@
 {
-    "name": "t8n-micro-gravity",
+    "name": "@tgrv/microgravity",
     "version": "1.0.0",
     "description": "TitanPL Test Sandbox - Execute real TitanPL code in Vitest without mocking",
     "type": "module",
